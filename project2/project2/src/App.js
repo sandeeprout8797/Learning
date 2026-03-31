@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
- 
+
 import Header from './Header';
 import Footer from './Footer';
 
-function App() {
-  let name = "sandeep";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
 
+function App() {
+  let headerInfo = {
+    email: '@gmail.com',
+    phone: '8700531747'
+  }
   return (
-    <div className='container'>
-      <h1 className='text-danger'> Hello </h1>
+
+    <div className="main">
+
+      <Header headerInfo={headerInfo} cname="rozgarsathi">
+        <h3> Welcome to header section from app.js </h3>
+      </Header>
+
+      <Footer />
+
     </div>
   );
-}
-
-function Card() {
-  return (
-    <div className='cardDiv'>
-      <h1> Card Division </h1>
-    </div>
-  )
 }
 
 export default App;

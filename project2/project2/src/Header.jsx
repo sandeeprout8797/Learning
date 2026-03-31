@@ -1,7 +1,25 @@
-function Header() {
+function Header({ headerInfo, cname, children }) {
     return (
-        <h1> this is a Header section from Header.jsx </h1>
-    )
+        <div>
+            <h1>
+                This is a Header section from Header.jsx
+                <br />
+
+                Props: {JSON.stringify(headerInfo)}
+                <br />
+
+                Email: {headerInfo.email}
+                <br />
+
+                Phone: {headerInfo.phone}
+                <br />
+
+                Cname: {cname}
+            </h1>
+
+            <h3> header from App.js: {children}</h3>
+        </div>
+    );
 }
 
 export default Header;
